@@ -74,21 +74,21 @@ class Example:
             pos, tet_vtx_indices = gen_tetmesh(
                 res=res,
                 bounds_lo=wp.vec3(0.0, 0.0, 0.0),
-                bounds_hi=wp.vec3(1.0, 0.5, 2.0),
+                bounds_hi=wp.vec3(10.0, 10.0, 10.0),
             )
             self._geo = fem.Tetmesh(tet_vtx_indices, pos)
         elif args.mesh == "hex":
             pos, hex_vtx_indices = gen_hexmesh(
                 res=res,
                 bounds_lo=wp.vec3(0.0, 0.0, 0.0),
-                bounds_hi=wp.vec3(1.0, 0.5, 2.0),
+                bounds_hi=wp.vec3(10.0, 10.0, 10.0),
             )
             self._geo = fem.Hexmesh(hex_vtx_indices, pos)
         else:
             self._geo = fem.Grid3D(
                 res=res,
                 bounds_lo=wp.vec3(0.0, 0.0, 0.0),
-                bounds_hi=wp.vec3(1.0, 0.5, 2.0),
+                bounds_hi=wp.vec3(10.0, 10.0, 10.0),
             )
 
         # Domain and function spaces
